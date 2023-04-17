@@ -1,0 +1,54 @@
+#include<stdio.h>
+int p_2, q_2, input=1, input2=1;
+void f_w1()
+{
+    p_2+=1;
+    input=1;
+    return;
+}
+
+void f_w2()
+{
+    p_2-=1;
+    input=2;
+    return;
+}
+
+void f_h1()
+{
+    q_2+=1;
+    input2=1;
+    return;
+}
+
+void f_h2()
+{
+    q_2-=1;
+    input2=2;
+    return;
+}
+int main()
+{
+    int w, h, p, q, t;
+    scanf("%d %d", &w, &h);
+    scanf("%d %d", &p, &q);
+    scanf("%d", &t);
+    p_2=p;
+    q_2=q;
+    while(t>0)
+    {
+    	
+    	if(p_2==w) input=2;
+        if(p_2==0) input=1;
+        if(q_2==h) input2=2;
+        if(q_2==0) input2=1;
+        if(input==1) f_w1();
+        if(input==2) f_w2();
+        if(input2==1) f_h1();
+        if(input2==2) f_h2();
+ 
+        t--;
+    }
+    printf("%d %d\n", p_2, q_2);
+    return 0;
+}
