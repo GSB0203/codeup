@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int n, sum=0;
+    scanf("%d", &n);
+    
+    while(1)
+    {
+        if(n>0) sum+=1;
+        else break;
+        n/=10;
+    }
+    printf("%d", sum);
+}
