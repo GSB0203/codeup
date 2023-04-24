@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    int n, n2, i, j;
+    scanf("%d %d", &n, &n2);
+    for(i=n;i<=n2;i++)
+        for(j=1;j<=9;j++)
+            printf("%d*%d=%d\n", i, j, i*j);
+}
