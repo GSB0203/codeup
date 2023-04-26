@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int n, d[110];
+
+
+int f()
+{
+    int arr = 0;
+    for(int i = 0; i<n; i++)  //arr에 최고값 넣기
+    {
+        if(d[i]>arr) arr = d[i];
+    }
+    for(int i = 0; i<n; i++)  //순서대로 나오면서 만약 d[i]==arr 같으면 출력
+    {
+        if(d[i] == arr)
+        {
+            return i+1;
+            break;
+        }
+    }
+}
+int main()
+{
+  scanf("%d", &n);
+
+  for(int i=0; i<n; i++)
+    scanf("%d", &d[i]);
+
+  printf("%d", f());
+  return 0;
+}
