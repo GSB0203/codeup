@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int n, i, j, l, c=0;
+    scanf("%d", &n);
+    
+    for(i=n;i>0;i--)
+    {
+        for(l=0;l<c;l++)
+            printf(" ");
+            
+        for(j=0;j<i;j++)
+            printf("*");
+            
+        printf("\n");
+        c++;
+    }
+}
