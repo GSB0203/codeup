@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int n;
+
+
+
+void f(int arr)
+{
+    if(arr==1) printf("hello\n");
+    else if(arr==2) printf("world\n");
+    else printf("\n");
+}
+int main()
+{
+  scanf("%d", &n);
+  f(n);
+  return 0;
+}
