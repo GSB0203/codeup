@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int n;
+
+
+
+void f(int arr)
+{
+    int j=0;
+    for(int i=2;i<=arr;i++)
+        if(arr%i==0) j++;
+        
+    if(j==1) printf("prime");
+    else printf("composite");
+}
+int main()
+{
+  scanf("%d", &n);
+  f(n);
+  return 0;
+}
