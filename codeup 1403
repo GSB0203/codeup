@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int i, j, a[10000], n;
+    scanf("%d", &n);
+    
+    for(i=1;i<=n;i++)
+        scanf("%d", &a[i]);
+        
+    for(j=1;j<=2;j++)
+        for(i=1;i<=n;i++)
+            printf("%d ", a[i]);
+            
+    return 0;
+}
