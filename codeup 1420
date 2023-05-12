@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+struct student {
+    char name[10];
+    int score;
+};
+
+int main()
+{
+    int n, i, max=0, max2=0, max3=0, check;
+    struct student arr[1001];
+    scanf("%d", &n);
+    
+    
+    for(i=0;i<n;i++)
+    {
+        scanf("%s %d", &arr[i].name, &arr[i].score);
+        if(arr[i].score>max) max=arr[i].score;
+    }
+    
+    
+    for(i=0;i<n;i++)
+        if(arr[i].score!=max)
+            if(arr[i].score>max2) max2=arr[i].score;
+    
+    
+    for(i=0;i<n;i++)
+        if(arr[i].score!=max && arr[i].score!=max2)
+            if(arr[i].score>max3)
+            {
+                max3=arr[i].score;
+                check=i;
+            }
+            
+    printf("%s", arr[check].name);
+}
