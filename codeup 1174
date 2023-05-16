@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    int h, m, a_h;
+    scanf("%d %d", &h, &m);
+    
+    a_h=h*60+m+60+60*24;
+    printf("%d %d", (a_h-30-60)/60%24, (a_h-30-60)%60);
+    return 0;
+}
