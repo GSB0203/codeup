@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n, i, j, a[1000][1000], s=1;
+    scanf("%d", &n);
+    
+    for(i=1;i<=n;i++)
+        for(j=n;j>0;j--)
+            a[i][j]=s++;
+            
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+            printf("%d ", a[i][j]);
+        printf("\n");
+    }
+}
