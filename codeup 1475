@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int n, m, i, j, s=1, arr[1000][1000], j_c=1;
+    scanf("%d %d", &n, &m);
+    
+    for(i=1;i<=m;i++)
+    {
+        if(j_c%2!=0)
+        {
+            for(j=1;j<=n;j++)
+                arr[i][j]=s++;
+        }
+        else
+        {
+            for(j=n;j>0;j--)
+                arr[i][j]=s++;
+        }
+        j_c+=1;
+    }
+    
+    for(i=1;i<=n;i++)
+    {
+        for(j=m;j>0;j--)
+            printf("%d ",arr[j][i]);
+        printf("\n");
+    }
+
+
+}
