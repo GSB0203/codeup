@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n, m, i, j, l, s = 1, arr[1000][1000];
+    scanf("%d %d", &n, &m);
+
+    for (l = 1; l <= n + m; l++) {
+        for (i = n; i >= 1; i--) {
+            j = l - i; // 열 우선 순회를 위한 식
+            if (j >= 1 && j <= m) {
+                arr[i][j] = s++;
+            }
+        }
+    }
+
+    for (i = 1; i <=n; i++) {
+        for (j = m; j >= 1; j--) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
