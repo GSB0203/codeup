@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	int arr[101][101]={}, x, y, n, w, h, d, l, i, j;
+	scanf("%d %d", &h, &w);
+	scanf("%d", &n);
+	
+	
+	while(n--)
+	{
+	    scanf("%d %d %d %d", &l, &d, &x, &y);
+        while(l--)
+        if(d) arr[x++][y]=1;
+        else arr[x][y++]=1;
+	}
+	
+	
+	
+	for(i=1;i<=h;i++, puts(""))
+	    for(j=1;j<=w;j++)
+	        printf("%d ", arr[i][j]);
+}
