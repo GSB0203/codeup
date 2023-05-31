@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+long long int n;
+
+long long int f(long long int n)
+{
+    while(n>9)  //각 문자를 확인하기 위해 10을 나누는데 만약 n>0이면 n/10=0 이 
+    {           //가능하고 마지막 return n;으로 0이 출력되니 비교는 9여야 한다.
+        printf("%d", n%10);
+        n/=10;
+    }
+    return n;
+}
+int main()
+{
+  scanf("%lld", &n);
+  printf("%lld\n", f(n));
+}
