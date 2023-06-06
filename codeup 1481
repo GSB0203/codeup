@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+	int n, m, l, s=1, arr[1000][1000];
+	scanf("%d %d", &n, &m);
+	int i=n;
+	int j=m;
+	int temp_i=i;
+	int temp_j=j;
+	
+	for(l=1;l<=n*m;l++)  //n*m만큼 실행
+	{
+	    if((i>=1&&i<=n)&&(j>=1&&j<=m)) //i와j 가 0보다 크고 n, m 사이에 있을 때 실행
+	    {
+	        arr[i][j]=s;  //arr[i][j]=1 대입입
+	        s++;  //1증가
+	        i--;  //위로 이동
+	        j++;  //오른쪽 밑에서 시작해서 왼쪽 위로 가니 j--
+	        if(!((i>=1&&i<=n)&&(j>=1&&j<=m)))  //만약 범위를 벗어났는가?
+	        {
+	            temp_j--;  //다음 칸으로 이동하는 명령어
+	            if(temp_j<=0)
+	            {
+	                temp_j=1;
+	                temp_i--;
+	            }
+	            i=temp_i;
+	            j=temp_j;  //다음 칸으로 이동하는 명령어어
+	        }
+	    }
+	}
+	for(i=1;i<=n;i++)
+	{
+	    for(j=1;j<=m;j++)
+	        printf("%d ", arr[i][j]);
+	   printf("\n");
+	}
+}
+
