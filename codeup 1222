@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+    int a, b, c, i;
+    scanf("%d %d %d", &a, &b, &c);
+    i=((89-a)/5+1)+b;
+    
+    if(i>c) printf("win");
+    else if(i<c) printf("lose");
+    else if(i=c)printf("same");
+}
