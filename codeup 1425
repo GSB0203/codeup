@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int n, c, num[100]={};
+    scanf("%d %d", &n ,&c);
+    
+    for(int i=1;i<=n;i++)
+        scanf("%d", &num[i]);
+    
+    for(int i=1;i<=n;i++)
+        for(int i=1;i<=n-1;i++)
+        {
+            if(num[i]>num[i+1])
+            {
+                int change=num[i];
+                num[i]=num[i+1];
+                num[i+1]=change;
+            }
+        }
+    int k=0;
+    for(int i=1;i<=n;i++)
+    {
+        printf("%d ", num[i]);
+        k++;
+        if(k==c)
+        {
+            printf("\n");
+            k=0;
+        }
+    }
+}
