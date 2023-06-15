@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int a, b;
+    scanf("%d", &a);
+    b=2012-a+1;
+    if(b>=1900)
+    {
+        if(b>=2000) printf("%d 3", b-2000);
+        else printf("%d 1", b-1900);
+    }
+}
