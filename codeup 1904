@@ -1,0 +1,14 @@
+#include<stdio.h>
+int a, b;
+int f(a, b)
+{
+    if(a>b) return;
+    if(a%2!=0) printf("%d ", a);
+    f(a+1, b);
+}
+
+main()
+{
+	scanf("%d %d", &a, &b);
+	f(a, b);
+}
