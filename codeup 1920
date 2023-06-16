@@ -1,0 +1,25 @@
+#include<stdio.h>
+int f(int n)
+{
+
+    if(n<1) return;
+    f(n/2);
+	if(n%2==0) printf("0");
+	if(n%2==1) printf("1");
+
+    
+    
+
+}
+main()
+{
+	int n;
+	scanf("%d", &n);
+	if(n==0)
+	{
+	    printf("0");
+	    return 0;
+	}
+	f(n);
+	
+}
