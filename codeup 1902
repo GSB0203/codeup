@@ -1,0 +1,14 @@
+#include<stdio.h>
+int f(int n)
+{
+    if(n<1) return;
+    printf("%d\n", n);
+    f(n-1);
+ 
+}
+main()
+{
+    int n;
+    scanf("%d", &n);
+    f(n);
+}
