@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int n, i, a;
+    scanf("%1d%1d", &n, &i);
+    if(i!=0) i*=10;
+    a=(i+n)*2;
+    if((i+n)*2>=100) a%=100;
+    printf("%d\n", a);
+    if(a<=50) printf("GOOD");
+    else printf("OH MY GOD");
+}
