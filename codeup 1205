@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a, b, m, p, y, x, s;
+    scanf("%f %f", &a, &b);
+    
+    s=a+b;
+    
+    x=a*b;
+    
+    if (a/b>b/a) y=a/b;
+    else y=b/a;
+    
+    if(a-b>b-a) m=a-b;
+    else m=b-a;
+    
+    if(pow(a,b)>pow(b,a)) p=pow(a,b);
+    else p=pow(b,a);
+    
+    if(s>=x&&s>=y&&s>=m&&s>=p) printf("%.6f", s);
+    else if(x>=s&&x>=y&&x>=m&&x>=p) printf("%.6f", x);
+    else if(y>=s&&y>=x&&y>=m&&y>=p) printf("%.6f", y);
+    else if(m>=s&&m>=x&&m>=y&&m>=p) printf("%.6f", m);
+    else if(p>=s&&p>=x&&p>=y&&p>=m) printf("%.6f", p);
+    
+}
