@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int a, a1, a2, a3;
+    scanf("%d %d %d %d", &a, &a1, &a2, &a3);
+    int sum=a+a1+a2+a3;
+    if(sum==0) printf("모");
+    else if(sum==1) printf("도");
+    else if(sum==2) printf("개");
+    else if(sum==3) printf("걸");
+    else if(sum==4) printf("윷");
+}
