@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    float a, b, c, d;
+    scanf("%f %f %f %f", &a, &b, &c, &d);
+    float n=a/b;
+    float n1=c/d;
+    
+    if(n>n1) printf(">");
+    else if(n<n1) printf("<");
+    else if(n=n1) printf("=");
+}
