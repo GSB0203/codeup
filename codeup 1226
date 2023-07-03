@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int n, n2, n3, n4, n5, n6, s;
+    int m, m2, m3, m4, m5, m6;
+    int i=0;
+    scanf("%d %d %d %d %d %d %d", &n, &n2, &n3, &n4, &n5, &n6, &s);
+    scanf("%d %d %d %d %d %d", &m, &m2, &m3, &m4, &m5, &m6);
+    
+    if(m==n||m==n2||m==n3||m==n4||m==n5||m==n6) i=i+1;
+    if(m2==n||m2==n2||m2==n3||m2==n4||m2==n5||m2==n6) i=i+1;
+    if(m3==n||m3==n2||m3==n3||m3==n4||m3==n5||m3==n6) i=i+1;
+    if(m4==n||m4==n2||m4==n3||m4==n4||m4==n5||m4==n6) i=i+1;
+    if(m5==n||m5==n2||m5==n3||m5==n4||m5==n5||m5==n6) i=i+1;
+    if(m6==n||m6==n2||m6==n3||m6==n4||m6==n5||m6==n6) i=i+1;
+    
+    if(i==6) printf("1");
+    if(i==5)
+    {
+        if(s==m||s==m2||s==m3||s==m4||s==m5||s==m6) printf("2");
+        else printf("3");
+    }
+    if(i==4) printf("4");
+    if(i==3) printf("5");
+    if(i<=2) printf("0");
+}
