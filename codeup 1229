@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    double h, w, sw;
+    scanf("%lf %lf", &h, &w);
+    
+    if(h<150) sw=h-100;
+    else if(h<160) sw=(h-150)/2+50;
+    else sw=(h-100)*0.9;
+    
+    double b=(w-sw)*100/sw;
+    
+    if(b<=10) printf("정상");
+    else if(b<=20) printf("과체중");
+    else if(b>20) printf("비만");
+}
