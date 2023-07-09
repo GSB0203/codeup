@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    char c;
+    while(scanf("%c", &c)!=EOF)
+    {
+        if(c==' ') printf(" "); 
+        else if(c=='x') printf("a");
+        else if(c=='y') printf("b");
+        else if(c=='z') printf("c");
+        else printf("%c", c+3);
+    }
+    return 0;
+}
