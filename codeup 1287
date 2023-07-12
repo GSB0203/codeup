@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int a, i, l, n=9, s;
+    scanf("%d", &a);
+    
+    for(i=1;i<=n;i++)
+    {
+        s=a*i;
+        for(l=1;l<=s;l++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
