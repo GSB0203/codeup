@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int a, b, i, s=0;  //a<=b
+    scanf("%d %d", &a, &b);
+    
+    for(i=a;i<=b;i++)
+    {
+        if(i%2!=0)
+        {
+            s+=i;
+            printf("+%d", i);
+        }
+        if(i%2==0)
+        {
+            s-=i;
+            printf("-%d", i);
+        }
+    }
+    printf("=%d", s);
+}
