@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    char n[10];
+    
+    scanf("%s", &n);
+        
+    if(n[0]=='l'&&n[1]=='o'&&n[2]=='v'&&n[3]=='e'&&n[4]=='\0')
+        printf("I love you.");
+}
