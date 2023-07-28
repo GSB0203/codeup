@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    char pass[100];
+    
+    scanf("%s", pass);
+    
+    for(int i=0;pass[i]!='\0';i++)
+        printf("%c", pass[i]+2);
+        
+    printf("\n");
+    
+    for(int i=0;pass[i]!='\0';i++)
+        printf("%c", (pass[i]*7)%80+48);
+}
