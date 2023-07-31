@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    char n[100];
+    int i, s=0, j;
+    scanf("%s", &n);
+    
+    for(i=0;n[i]!='\0';i++)
+        if(n[i]=='c'||n[i]=='C') s+=1;
+    
+    printf("%d\n", s);
+    s=0;
+    for(i=0;n[i]!='\0';i++)
+        if(n[i]=='C'&&n[i+1]=='C'||n[i]=='c'&&n[i+1]=='C'||n[i]=='C'&&n[i+1]=='c'||n[i]=='c'&&n[i+1]=='c') s+=1;
+        
+    printf("%d", s);
+}
