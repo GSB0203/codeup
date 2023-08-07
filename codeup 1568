@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int n, a, b, d[1010];
+int max=-2147483648, check;
+int maxi(int a, int b)
+{
+    for(int i=a;i<=b;i++)
+        if(max<d[i])
+        {
+            max=d[i];
+            check=i;
+        }
+    return check;
+}
+int main()
+{
+  scanf("%d", &n);
+
+  for(int i=1; i<=n; i++)
+    scanf("%d", &d[i]);
+
+  scanf("%d%d", &a, &b);
+
+  printf("%d\n", maxi(a, b));
+}
