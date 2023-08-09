@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(void)
+{
+    int a[51][51]={}, n, x=1, i, j;
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            a[i][j]=x++;
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    
+    
+    return 0;
+}
