@@ -1,0 +1,19 @@
+#include<stdio.h>
+long long int a=0;
+
+long long int sum(long long int k)
+{
+    if(k<1) return;
+	a+=k%10;
+    sum(k/10);
+    
+}
+
+int main()
+{
+	long long int n;
+	scanf("%lld", &n);
+	sum(n);
+	printf("%lld", a);
+	return 0;
+}
