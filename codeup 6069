@@ -1,0 +1,5 @@
+a={'A':"best!!!", 'B':"good!!", 'C':"run!", 'D':"slowly~"}
+score = str(input())
+print(a.get(score, "what?"))
+
+
