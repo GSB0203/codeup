@@ -1,0 +1,27 @@
+#include <stdio.h>#include <stdio.h>
+int a[10001];inta[10001];
+int n, i, j, temp, flag;int n, i, j, temp, flag;
+int main() {int 메인 () {
+    scanf("%d", &n);스캔f ("%d", &n);
+    for (i=1; i<=n; i++)(i=1; i<=n; i++)의 경우
+        scanf("%d", &a[i]);스캔f ("%d", &a[i]);
+
+    for(i=0; i<n; i++)(i=0; i<n; i++)의 경우
+    {{
+        flag=0;flag=0;
+        for(j=1;j<n;j++)(j=1;j<n;j++)의 경우
+        {{
+            if (a[j] > a[j+1])만약 (a[j] > a[j+1])
+            {{
+                temp = a[j];온도 = a[j];
+                a[j] = a[j+1];a[j] = a[j+1];
+                a[j+1] = temp;a[j+1] = 온도;
+                flag+=1;flag+=1;
+            }}
+        }}
+        if(flag==0) break;( flag==0) 파손인 경우
+    }}
+
+    printf("%d", i);printf ("%d", i);
+    return 0;
+}}
