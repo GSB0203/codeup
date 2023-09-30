@@ -1,0 +1,7 @@
+c = ord(input())
+t=ord('q')
+while c!=t:
+  print(chr(c))
+  c = ord(input())
+
+print(chr(c))
