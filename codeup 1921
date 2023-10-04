@@ -1,0 +1,14 @@
+#include<stdio.h>
+char a[21]={0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J'};
+int f(int n, int k) {
+    if(n==0) return;
+    f(n/k, k);
+    if(n%k<10) printf("%d", a[n%k]);
+    else printf("%c", a[n%k]);
+}
+int main() {
+    int n, k;
+    scanf("%d %d", &n, &k);
+    f(n, k);
+    return 0;
+}
