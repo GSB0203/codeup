@@ -1,0 +1,4 @@
+h, b, c, s=map(int, input().split())
+U=1024*1024*8
+a=h*b*c*s
+print("%0.1f MB" %(a/U))
