@@ -1,0 +1,10 @@
+n = input()
+re_n = n[::-1]
+palindrome = int(re_n) + int(n)
+
+palindrome = list(map(int, str(palindrome)))
+
+if list(palindrome) == list(reversed(palindrome)):
+    print("YES")
+else:
+    print("NO")
