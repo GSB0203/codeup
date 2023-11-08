@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+typedef struct {
+    int a, b, c;
+}O;
+
+O d[1001];
+int check[1001] = {0};
+int main() {
+    int n, i, a, b, c, count = 0;
+    scanf("%d", &n);
+    for(i=0;i<n;i++) {
+        scanf("%d %d %d", &a, &b, &c);
+        d[c].a = a;
+        d[c].b = b;
+        d[c].c = c;
+    }
+    for(i=1000;i>0;i--)
+        if(d[i].a) {
+            check[d[i].a]++;
+            if(check[d[i].a] <= 2) {
+                printf("%d %d\n", d[i].a, d[i].b);
+                count++;
+                if (count == 3) return 0;
+            }
+            else continue;
+        }
+}
