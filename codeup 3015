@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+
+typedef struct student {
+    char name[10];
+    int score;
+    int priority;
+}Student;
+
+bool cmp(Student a, Student b) {
+    if(a.score == b. score) return a.priority < b.priority;
+    else return a.score > b.score;
+}
+
+int n, m, i;
+Student s[100] = {0};
+
+int main() {
+    scanf("%d %d", &n, &m);
+    for(i=0;i<n;i++) {
+        scanf("%s %d", s[i].name, &s[i].score);
+        s[i].priority = i;
+    }
+    sort(s, s+n, cmp);
+
+    for(i=0;i<m;i++)
+        printf("%s\n", s[i].name);
+
+}
