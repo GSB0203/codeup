@@ -19,4 +19,4 @@ int main()
 	for(i=1;i<=h;i++, puts(""))
 	    for(j=1;j<=w;j++)
 	        printf("%d ", arr[i][j]);
-}
+} 
