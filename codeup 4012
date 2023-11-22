@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+typedef struct {
+    int score;
+    int num;
+}Score;
+
+Score s[201];
+
+int main() {
+    int n, i, j;
+    scanf("%d", &n);
+    for(i=0;i<n;i++) {
+        scanf("%d", &s[i].score);
+        s[i].num = 1;
+    }
+    for(i=0;i<n;i++)
+        for(j=0;j<n;j++)
+            if(s[i].score > s[j].score) s[j].num++;
+    
+    for(i=0;i<n;i++, puts(""))
+        printf("%d %d", s[i].score, s[i].num);
+
+    return 0;
+}
