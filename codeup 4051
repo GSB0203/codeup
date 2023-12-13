@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    float s[5] = {}, e[5] = {};
+    float sum = 0;
+    int money = 0;
+
+    for(int i = 0 ; i < 5 ; i++) {
+        scanf("%f %f", &s[i], &e[i]);
+        float overtime = e[i] - s[i] - 1;
+        if(overtime > 0.0) {
+            if(overtime > 4.0) overtime = 4.0;
+            sum += overtime;
+        }
+    }
+    
+    if(sum >= 15.0) {
+        money = (sum / 0.5) * 5000;
+        money *= 0.95 ;
+    }
+    else if(sum <= 5.0) {
+        money = (sum / 0.5) * 5000;
+        money *= 1.05; 
+    }
+    else money = (sum / 0.5) * 5000;
+    printf("%d", money);
+}
