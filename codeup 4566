@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+int main() {
+    int m, n;
+    int a[10000] = {};
+    int i, j;
+    int sum = 0, mininum = 0;
+    scanf("%d %d", &m, &n);
+
+    for(i = 2; i<= sqrt(10000); i++)
+        if(a[i] == 0)
+            for(j =2; i * j < 10000; j++)
+                a[i * j] = 1;
+
+    for(i = n; i >= m; i--) {
+        if(i == 1) break;
+        if(a[i] == 0) {
+            sum += i;
+            mininum = i;
+        }
+    }
+
+    if(sum == 0) printf("-1");
+    else printf("%d\n%d", sum, mininum);
+    return 0;
+}
