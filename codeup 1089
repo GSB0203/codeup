@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int a, d, n, i, s=0;
+    scanf("%d %d %d", &a, &d, &n);
+    for(i=1; i<=n-1; i++)
+    {
+        a+=d;
+    }
+    printf("%d", a);
+    return 0;
+}
+
