@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int i, j;
+    char a[100] = {}, b[100] = {};
+    scanf("%s", a);
+    scanf("%s", b);
+
+    for(i=0;a[i]!='\0';i++)
+        if(a[i] == b[i]) {
+            for(j=0;b[j]!='\0';j++) {
+                if(a[j] != b[j]) {
+                    printf("X");
+                    return 0;
+                }
+            }
+        }
+    
+    printf("O");
+    
+    return 0;
+}
