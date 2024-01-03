@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int n, m;
+    int i;
+    int check = 0;
+    int money[] = {500, 100, 50, 10};
+    scanf("%d\n%d", &n, &m);
+    int remain = n - m;
+
+    for(i=0;i<4;i++) {
+        while(remain / money[i]) {
+            remain -= money[i];
+            check += 1;
+        }
+    }
+    
+    printf("%d", check);
+    return 0;
+}
