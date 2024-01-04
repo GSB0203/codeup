@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    long long int w, h, b, p=1024*1024*8;
+    scanf("%lld %lld %lld", &w, &h, &b);
+    double s=w*h*b;
+    printf("%0.2lf MB", s/p);
+    return 0;
+}
+
