@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+    int d[101] = {};
+    int n, k;
+    int s, e, u;
+    int sum = 0;
+    int i;
+    scanf("%d %d", &n, &k);
+
+    for(i=1;i<=k;i++) {
+        scanf("%d %d %d", &s, &e, &u);
+        d[s] = d[s] + u;
+        d[e + 1] = d[e + 1] - u;
+    }
+    
+    for(i=1;i<=n;i++)
+        printf("%d ", d[i]);
+    puts("");
+
+    for(i=1;i<=n;i++) {
+        sum += d[i];
+        printf("%d ", sum);
+    }
+    
+    return 0;
+}
