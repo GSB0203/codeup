@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main() {
+    int n;
+    int k[1000001] = {};
+    int battery = 0;
+    int altitudeDifference = 0;
+    int min = 9999999;
+    int i;
+    scanf("%d", &n);
+    for(i=0;i<n;i++)
+        scanf("%d", &k[i]);
+    
+    altitudeDifference = k[0];
+    
+    for(i=1;i<n;i++) {
+        if(k[i - 1] <= k[i]) {
+            altitudeDifference = k[i] - k[i - 1];
+            battery -= altitudeDifference * 2;
+            if(min > battery) min = battery;
+        }
+        else if(k[i - 1] > k[i]) {
+            altitudeDifference = k[i - 1] - k[i];
+            battery += altitudeDifference / 2;
+            altitudeDifference = k[i];
+            if(min > battery) min = battery;
+        }
+    }
+    
+    if(battery >= 0) printf("0");
+    else if(min <battery) printf("%d", -min);
+    else printf("%d", -battery);
+    return 0;
+}
