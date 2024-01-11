@@ -1,0 +1,12 @@
+n = int(input())
+dna = input()
+
+for i in range(n):
+    if dna[i] == 'A':
+        print('U', end='')
+    elif dna[i] == 'G':
+        print('C', end='')
+    elif dna[i] == 'C':
+        print('G', end='')
+    elif dna[i] == 'T':
+        print('A', end='')
