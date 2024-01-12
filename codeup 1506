@@ -1,0 +1,28 @@
+#include<stdio.h>
+int a[101][101]={1,0}, i, j, n;
+int y, x, ny, nx, cnt=1;
+int dy[4]={1, 0, 0, -1}, dx[4]={0, 1, -1, 0};
+
+void print_matrix() {
+    for(int i=0;i<n;i++, puts("")) 
+        for(int j=0;j<n;j++) printf("%d ", a[i][j]);
+}
+
+int safe(int a, int b) {
+    return ((a>=0 && a<n) && (b>=0 && b<n));
+}
+int main() {
+    scanf("%d", &n);
+    int s=n*n;
+    
+    while(s>cnt) {
+        ny=y+dy[i%4], nx=x+dx[i%4];
+        if(safe(ny, nx) && a[ny][nx]==0) {
+            a[ny][nx]=++cnt;
+            y=ny, x=nx;
+        }
+        else i++;
+    }
+    print_matrix();
+	return 0;
+}
