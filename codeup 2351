@@ -1,0 +1,29 @@
+def asum(a):  #다리 위 학생 수
+    sum = 0
+    for i in range(len(a)):
+        sum += a[i]
+    return sum
+    
+w, b = map(int, input().split())  #최대인원, 다리 구간 수
+n = int(input())  #학급 수
+k = [int(i) for i in input().split()]  #학급별 인원
+d = []; cnt = 1; i = 1  #다리, 시간, 현재 보고 있는 학급
+d.append(k[0])  #맨 처음 학급 다리 올림
+
+while asum(d) > 0:  #다리 위에 학생이 없을 때까지
+    if len(d) >= b:  #다리 마지막 구간에 학급이 있을 때
+        d.pop(0)
+        
+    if i < len(k):  #학급을 다리 위로 올림
+        d.append(k[i])
+    else:  #마지막 학급까지 다리 위에 있는가
+        d.append(0)
+        
+    cnt += 1; i += 1
+    
+    if asum(d) > w:  #다리 위 학생수가 최대인원 초과시
+        d.pop()
+        d.append(0)
+        i -= 1
+        
+print(cnt)
