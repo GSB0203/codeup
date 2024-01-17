@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int arr[101][101] = {};
+    int x1, x2, y1, y2;
+    int area = 0;
+    int i, j, l;
+    for(i=0;i<4;i++) {
+        scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+        for(j=x1;j<x2;j++) {
+            for(l=y1;l<y2;l++) {
+                arr[j][l] = 1;
+            }
+        }
+    }
+
+    for(i=0;i<101;i++)
+        for(j=0;j<101;j++)
+            if(arr[i][j] == 1) area += 1;
+
+    printf("%d", area);
+    return 0;
+}
