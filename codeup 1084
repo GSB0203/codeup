@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	int c=0, i, j, l, r, g, b;
+	scanf("%d %d %d", &r, &g, &b);
+	
+	for(i=0;i<r;i++)
+	    for(j=0;j<g;j++)
+	        for(l=0;l<b;l++)
+	        {
+	            printf("%d %d %d\n", i, j, l);
+	            c++;
+	        }
+	 printf("%d", c);
+	 return 0;
+}
